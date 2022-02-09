@@ -10,26 +10,26 @@
         android:id="@+id/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/saint_paul_mn"
         android:layout_margin="12dp"
+        android:text="@string/saint_paul_mn"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="72sp"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
         android:text="@string/temperature"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/city_name"
+        android:textSize="72sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="72°"/>
+        app:layout_constraintTop_toBottomOf="@id/city_name"
+        tools:text="72°" />
 
     <ImageView
         android:id="@+id/condition_icon"
@@ -37,61 +37,72 @@
         android:layout_height="72dp"
         android:contentDescription="@null"
         android:scaleType="center"
-        app:layout_constraintTop_toTopOf="@id/temperature"
-        app:layout_constraintBottom_toBottomOf="@id/temperature"
-        app:layout_constraintStart_toEndOf="@id/temperature"
         android:src="@drawable/orange_sun_icon"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/temperature"
+        app:layout_constraintTop_toTopOf="@id/temperature" />
 
     <TextView
         android:id="@+id/feel_like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/feels_like"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/temperature"
-        app:layout_constraintStart_toStartOf="@id/temperature"
         app:layout_constraintEnd_toEndOf="@id/temperature"
-        android:text="@string/feels_like"/>
+        app:layout_constraintStart_toStartOf="@id/temperature"
+        app:layout_constraintTop_toBottomOf="@id/temperature" />
 
     <TextView
         android:id="@+id/low"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/low"
         android:layout_marginTop="24dp"
+        android:text="@string/low"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/temperature"
-        app:layout_constraintTop_toBottomOf="@id/feel_like"/>
+        app:layout_constraintTop_toBottomOf="@id/feel_like" />
 
     <TextView
         android:id="@+id/high"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/High"
-        android:textSize="15sp"
+        android:text="@string/high"
         android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/temperature"
-        app:layout_constraintTop_toBottomOf="@id/low"/>
+        app:layout_constraintTop_toBottomOf="@id/low" />
 
     <TextView
         android:id="@+id/humidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Humidity"
-        android:textSize="15sp"
+        android:text="@string/humidity"
         android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/temperature"
-        app:layout_constraintTop_toBottomOf="@id/high"/>
+        app:layout_constraintTop_toBottomOf="@id/high" />
+
     <TextView
+        android:id="@+id/pressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Pressure"
-        android:textSize="15sp"
+        android:text="@string/pressure"
         android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/temperature"
-        app:layout_constraintTop_toBottomOf="@id/humidity"/>
+        app:layout_constraintTop_toBottomOf="@id/humidity" />
 
+    <Button
+        android:id="@+id/forecast_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/forecast_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pressure" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
