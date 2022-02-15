@@ -46,7 +46,7 @@ class MyAdapter(private val data: List<DayForecast>) : RecyclerView.Adapter<MyAd
             // in order to call context.getString from .text to display string to the TextViews
             val sunriseFormat = sunriseTimeFormatter.format(sunriseTime)
             val sunsetFormat = sunsetTimeFormatter.format(sunsetTime)
-            val tempValue = 72
+            val tempValue = forecastData.temp.day.toInt()
             val highTemp = forecastData.temp.maxTemperature.toInt()
             val lowTemp = forecastData.temp.minTemperature.toInt()
 

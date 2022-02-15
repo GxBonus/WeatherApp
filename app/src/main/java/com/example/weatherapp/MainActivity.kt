@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         forecastButton =findViewById(R.id.forecast_button)
         forecastButton.setOnClickListener(){
-            startActivity(Intent(this, ForecastActivity::class.java))
+            startActivity(Intent(this, Forecast::class.java))
 
             }
         }
