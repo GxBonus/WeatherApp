@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.time.DayOfWeek
 
-open class ForecastActivity : AppCompatActivity() {
 
-   private lateinit var recyclerView: RecyclerView
+open class Forecast : AppCompatActivity() {
 
-    val adapterData = listOf<DayForecast>(
+    private lateinit var recyclerView: RecyclerView
+
+    private val adapterData = listOf<DayForecast>(
         DayForecast(1620540000,1620540000L,1620590100,ForecastTemp(9F, 65F,80F), 950F, 70),// May 9
         DayForecast(1620635400,1620630000, 1620678900,ForecastTemp(10F, 50F, 70F), 1030F, 55),// May 10
         DayForecast(1620723600,1620719160, 1620767460,ForecastTemp(11F, 60F, 85F), 850F, 45),// May 11
@@ -34,7 +34,7 @@ open class ForecastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forecast)
 
-        // create recyclerView variable and intialize it to find the view of the recycer view ID
+        // create recyclerView variable and initialize it to find the view of the recycler view ID
         // Remember to set layoutManager
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
