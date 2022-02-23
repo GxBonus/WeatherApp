@@ -24,6 +24,7 @@
         android:layout_height="match_parent"
         android:gravity="start|center_vertical"
         android:paddingHorizontal="5dp"
+        android:text=""
         app:layout_constraintStart_toEndOf="@id/condition_icon"
         tools:text="May 09"/>
 
@@ -32,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="3dp"
+        android:text="@string/sunrise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/current_temp"
         app:layout_constraintBottom_toBottomOf="@id/current_temp"
@@ -44,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="3dp"
+        android:text="@string/sunset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/low_temp"
         app:layout_constraintBottom_toBottomOf="@id/low_temp"
@@ -55,6 +58,7 @@
         android:layout_height="wrap_content"
         android:paddingEnd="3dp"
         android:paddingStart="10dp"
+        android:text = "@string/temp"
         app:layout_constraintStart_toEndOf="@+id/date"
         app:layout_constraintTop_toTopOf="@id/date"
         tools:text="Temp: 72°"/>
@@ -65,6 +69,7 @@
         android:layout_height="wrap_content"
         android:paddingEnd="3dp"
         android:paddingStart="10dp"
+        android:text="@string/high_temp"
         app:layout_constraintStart_toEndOf="@id/date"
         app:layout_constraintTop_toBottomOf="@id/current_temp"
         app:layout_constraintBottom_toBottomOf="@id/date"
@@ -76,6 +81,7 @@
         android:layout_height="wrap_content"
         android:paddingEnd="3dp"
         android:paddingStart="10dp"
+        android:text="@string/low_temp"
         app:layout_constraintTop_toTopOf="@id/high_temp"
         app:layout_constraintBottom_toBottomOf="@id/high_temp"
         app:layout_constraintStart_toEndOf="@id/high_temp"
