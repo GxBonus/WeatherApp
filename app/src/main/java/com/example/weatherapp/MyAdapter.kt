@@ -14,7 +14,8 @@ import java.time.format.DateTimeFormatter
 
 // Create MyAdapter that inherits (:) RecyclerView.Adapter
 // which hold's a ViewHolder type that is pass into <MyAdapter.ViewHolder
-class MyAdapter(private val data: List<DayForecast>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(private var data: List<DayForecast>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+
 
     // create ViewHolder class as a sub class of adapter class
     // to describe the item view's data and metadata
@@ -47,8 +48,8 @@ class MyAdapter(private val data: List<DayForecast>) : RecyclerView.Adapter<MyAd
             val sunriseFormat = sunriseTimeFormatter.format(sunriseTime)
             val sunsetFormat = sunsetTimeFormatter.format(sunsetTime)
             val tempValue = forecastData.temp.day.toInt()
-            val highTemp = forecastData.temp.maxTemperature.toInt()
-            val lowTemp = forecastData.temp.minTemperature.toInt()
+            val highTemp = forecastData.temp.max.toInt()
+            val lowTemp = forecastData.temp.min.toInt()
 
 
             dateView.text = dateFormatter.format(dateTime)
@@ -75,9 +76,24 @@ class MyAdapter(private val data: List<DayForecast>) : RecyclerView.Adapter<MyAd
         // Get element from your dataset at this position and replace
         // the contents of the view with that element
         holder.bind(data[position])
+
     }
 
     // Return the size of the your dataset (invoked by the layout manager)
     override fun getItemCount() = data.size
+
+
+
+    fun updateData(updateForecast: Forecast){
+        val updateList = updateForecast
+        notifyItemRangeChanged(0,itemCount,null)
+
+
+
+
+    }
+
 }
+
+
 
